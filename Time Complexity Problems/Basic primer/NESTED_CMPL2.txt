@@ -1,0 +1,23 @@
+What is the time complexity of the following code :
+
+    int a = 0;
+    for (i = 0; i < N; i++) {
+        for (j = N; j > i; j--) {
+            a = a + i + j;
+        }
+    }
+
+Ans: O(N*N)
+
+Reason:
+
+1st for loop run n-1 time.
+2nd  for loop run n(n-1) time;
+
+T(n)= n-1+n*2 -n;
+T(n)=n*2 -1;
+
+O(n*2)
+
+
+
