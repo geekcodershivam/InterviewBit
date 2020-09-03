@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+
+
+   function operation(ch){
+     let val1 =document.getElementById('val1').value - '0';
+     let val2=document.getElementById('val2').value - '0';
+     if(ch=='+') document.getElementById('result').value=eval(val1 + val2)
+     else if(ch=='-') document.getElementById('result').value=eval(val1-val2);
+     else if(ch=='*') document.getElementById('result').value=eval(val1*val2);
+     else if(ch=='/') document.getElementById('result').value=eval(val1/val2);
+   };
+</script>
+<style>
+    
+    div{
+        margin: 26px;
+        
+        
+    }
+    .title{
+    text-align: center;
+    }
+    .t1{
+        font-size: 21px;
+    }
+    .btn{
+        padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+        background-color: green;
+        margin-right: 26px;
+    }
+    input{
+        margin-left: 20px;
+    }
+
+
+</style>
+<body>
+    <div>
+        <h2 class="title"> Calculator </h2>
+        <div class="t1">Type Value 1:    <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" id='val1' placeholder="Only Number is Allow"></div> 
+        <div class="t1">Type Value 1:    <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" id='val2' placeholder="Only Number is Allow"></div> 
+        <div>
+            <button class='btn' id='add'   onclick="operation('+')" >+</button>
+            <button class='btn id='minus' onclick="operation('-')" >-</button>
+            <button class='btn id='multi' onclick="operation('*')" >*</button>
+            <button  class='btn id='div'   onclick="operation('/')" >/</button></div>
+        <div class="t1">Result:               <input type="text" id='result'></div>
+        
+
+    </div>
+</body>
+</html>
